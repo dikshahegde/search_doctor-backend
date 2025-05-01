@@ -22,10 +22,7 @@ public class doctorController {
 
     @Autowired
     private DoctorsService service;
-    @RequestMapping("/greet")
-    public String greet(){
-        return "Hello";
-    }
+
     @GetMapping("/doctors")
     public List<doctors> getAllDoctors(){
         return service.getAllDoctors();
