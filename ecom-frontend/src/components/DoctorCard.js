@@ -8,8 +8,9 @@ const DoctorCard = ({ doctor }) => {
       <p><strong>Speciality:</strong> {doctor.spec}</p>
       <p><strong>City:</strong> {doctor.city}</p>
       <p><strong>Fees:</strong> ₹{doctor.fees}</p>
-      <p><strong>Available:</strong> {doctor.avai ? "Yes" : "No"}</p>
-      <p><strong>Rating:</strong> ⭐{doctor.rating}</p>
+      <p><strong>Hospital:</strong> {doctor.hosp}</p>
+      <p><strong>City:</strong> {doctor.city}</p>
+      <p><strong>Experience:</strong> {doctor.exp}</p>
     </div>
   );
 };

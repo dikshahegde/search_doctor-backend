@@ -17,10 +17,8 @@ public class doctors {
     private int id;
     private String name;
     private String spec;
-    private String desc;
-    private String time;
     private int fees;
-    private boolean avai;
+    private String hosp;
     private String city;
-    private float rating;
+    private String exp;
 }
