@@ -1,10 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './login.css';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('http://localhost:8080/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const result = await response.text(); // Backend returns plain text
+
+    setMessage(result);
+    if (result === "Login successful!") {
+      alert("✅ Logged in!");
+      // You can navigate to another page here
+    }
+  };
+
   return (
-    <div className="login-page">
+    <div className="login-card">
       <h2>Login</h2>
-      {/* Your login form goes here */}
+      <form onSubmit={handleLogin}>
+  <input
+    type="email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+  />
+  <input
+    type="password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    required
+  />
+  <button type="submit">Login</button>
+</form>
+
+      {message && <p className="message">{message}</p>}
     </div>
   );
 };

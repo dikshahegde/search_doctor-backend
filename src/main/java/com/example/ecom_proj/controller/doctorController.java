@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class doctorController {
 
@@ -34,6 +34,7 @@ public class doctorController {
         if(userService.findByEmail(user.getEmail())!=null){
             return "Email alredy registered";
         }
+        
         userService.saveUser(user);
         return "Registration Completed";
 
