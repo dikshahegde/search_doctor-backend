@@ -34,7 +34,7 @@ const Home = () => {
           <option value="General Practice">General Practice</option>
           <option value="Gynecology">Gynecology</option>
           <option value="Occupational Medicine">Occupational Medicine</option>
-          <option value="Occupational Medicine">Homeopathy</option>
+          <option value="homeopathy">Homeopathy</option>
         </select>
         <button onClick={handleSearch}>Search</button>
       </div>
