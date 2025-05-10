@@ -35,6 +35,7 @@ const Home = () => {
           <option value="Gynecology">Gynecology</option>
           <option value="Occupational Medicine">Occupational Medicine</option>
           <option value="homeopathy">Homeopathy</option>
+          <option value="cardiologist">Cardiologist</option>
         </select>
         <button onClick={handleSearch}>Search</button>
       </div>
