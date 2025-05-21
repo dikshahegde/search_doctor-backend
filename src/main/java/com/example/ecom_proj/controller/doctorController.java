@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://search-doctor-kpvoc13pj-dikshas-projects-4cb170a4.vercel.app")
+@CrossOrigin(origins = {
+  "http://localhost:3000",
+  "https://search-doctor-kpvoc13pj-dikshas-projects-4cb170a4.vercel.app"
+})
 @RequestMapping("/api")
 public class doctorController {
 
